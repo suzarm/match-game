@@ -8,8 +8,8 @@ var cards = document.querySelectorAll('.card');
         if (opened.length == 1){
             return
         } else {
-            let firstCardContent = opened[0].innerText;
-            let secondCardContent =opened[1].innerText;
+            let firstCardContent = opened[0].innerHTML;
+            let secondCardContent =opened[1].innerHTML;
             if (firstCardContent == secondCardContent){
                 opened[0].remove();
                 opened[1].remove();
