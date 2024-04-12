@@ -10,16 +10,14 @@ var cards = document.querySelectorAll('.card');
         } else {
             let firstCardContent = opened[0].innerText;
             let secondCardContent =opened[1].innerText;
-            console.log(firstCardContent);
-            console.log(secondCardContent);
-            if(firstCardContent == secondCardContent){
-                opened[0].remove()
-                opened[1].remove()
-            }else{
-                
+            if (firstCardContent == secondCardContent){
+                opened[0].remove();
+                opened[1].remove();
+            } else {
+              opened[0].classList.toggle('is-flipped');
+              opened[1].classList.toggle('is-flipped');
             }
         }
-    },100);
-    
+    },2000);
   });
 });
